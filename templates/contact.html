@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Contact{% endblock title %}
+
+
+{% block content %}
+<h3 style="font-weight: bold;" class="text-center">Contact-Us</h3>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-7"> 
+            <h3>Get In Touch</h3>
+            <br>
+            <div>
+                <h5 class="text-muted">General Information</h5>
+                <p>+91 000 1000000</p>
+                <p>+91 999 999 9999</p>
+                <p>enquiry@emergencyhospital.in</p>
+                <p>patientrelations@emergencyhospital.in</p>
+            </div>
+            <div>
+                <h5 class="text-muted">For International Enquiries:</h5>
+                <p>+91 999 999 9999</p>
+                <p>enquiry@emergencyhospital.in</p>
+                <p>WWW.EmergencyHospital.in</p>
+            </div>
+            <div>
+                <h5 class="text-muted mb-1">Address</h5>
+                <p>Emergency Hospital, Seaport – Airport Road, Kakkanad, Kochi 682 030, Kerala, India</p>
+            </div>
+        </div>
+        <div style="background-color: rgba(35, 37, 30, 0.128);" class="col-md-5 p-3  my-4">
+            <h4 class="text-center">Contact Form</h4>
+            <div>
+                <form action="" method="POST">{% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn btn-primary m-4" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock content %}

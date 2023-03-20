@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+
+{% block content %}
+
+{% load static %}
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img src="{% static '/images/first.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static '/images/second.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static '/images/third.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static '/images/fourth.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static '/images/fifth.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static '/images/sixth.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="container">
+    
+    <div class="text-center p-3 w-70">
+        <h2>Centres of Excellence</h2>
+        <p>Emergency hospital, a tertiary health care centre, is widely recognized as a pioneer in 'Laparoscopic and Endoscopic Surgeries'. Being the Apex Centre for Minimally Invasive Surgery in Asia, we have also been honored as a Centre of excellence in 'Hernia Surgeries and Laparoscopic cancer Surgeries'. Specialized in 'Accident and Trauma care', we are ably equipped with state-of-the-art treatment for all types of medical emergencies.</p>
+    </div>
+</div>
+<div>
+    <div class="container text-center" style="background-color: rgba(160, 177, 157, 0.135);">
+        <h2>Our Valuable Doctors</h2>
+        {% for d in doctors %}
+        <div class="card text-center mx-5 my-3" style="width: 12rem;display: inline-block;">
+            <img class="card-img-top" src="{{d.doc_image.url}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{d.doc_name}}</h5>
+              <p class="card-text">{{d.doc_spec}}</p>
+              <h6>{{d.dept_name}}</h6>
+              <a href="#"  class="">Treatments</a>
+            </div>
+          </div>
+    
+        {% endfor %}
+    
+    </div>
+</div>
+<div class="container">
+    <div class="text-center p-3 w-70">
+        <h2>Other Speciality</h2>
+        <p>We accommodate more than 40 medical departments and specialties. Sunrise Hospital has branches across kerala at Changamkulam, Kanhangad and Kasaragod. Aesthetically laid out, this hospital is maintained under very stringent conditions of asepsis that ensures a clean infection-free environment which is at the same time extremely warm, caring and relaxing.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-5 pt-2 mt-4">
+            <h3>Our Management Team</h3>
+        </div>
+        <div class="col-md-7 pt-4">
+            <h6>Dr. Hafeez Rahman Padiyath //Founder Chairman, Emergency Group of Hospitals//</h6>
+            <p>Dr Hafeez Rahman is world-renowned as one of the pioneers in Minimally Invasive Surgery or Laparoscopic Surgical Procedures. After completing MBBS from Calicut Medical College, Kerala in India and joined Govt Medical College at Ahmedabad for his post-graduation. He is a Gold Medalist from Gujarat University. He has worked with renowned Onco surgeons from UK and Australia at Regional Cancer Centre, Ahmedabad, Gujarat, India. He did the first Laparoscopic Hysterectomy in 1992, only 3 years after the first Laparoscopic Hysterestomy in the world was performed in 1989. Over the past 30 years, he has done more than 1,00,000 Laparoscopic Surgeries including 25,000+ Hysterectomies. He is a visiting Laparoscopic Surgeon at various institutes in India and Abroad (Malaysia, Srilanka, UAE and Bangladesh). He introduced Laparoscopy in many states India and neighboring like Sri Lanka and Bangladesh. Being innovative and blessed with special surgical skills including the rare gift of ambidextrous, he has modified several existing surgical techniques, making them cost effective, easier to perform, safer and of greater efficacy. Over the years, he has developed and standardized many unique techniques of his own, which are now diligently followed worldwide. Teaching is his passion and he has trained more than 2000 doctors from different part of the world.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 pt-2 mt-4">
+        </div>
+        <div class="col-md-7 pt-4">
+            <h6>Ms. Parveen Hafeez //Chairperson & Managing Director, Emergency Group of Hospitals//</h6>
+            <p>Ms Parveen Hafeez, Managing Director of Sunrise Group of Hospitals, a chain of multispecialty hospital network popularly known as an acclaimed apex center for advanced laparoscopy in Asia and has branches in pan India and overseas to provide quality healthcare to the people at par with international standards. Ms Parveen began her business career with Medlance Group of Companies. The incredible journey started 26 years ago, with Medlance her first company, she is also the Managing Partner of iware Solutions, a software development company based out of Kochi.
+
+                A nominated member of Kerala State Women’s Development Corporation, She was also the Founder Chairperson of the Ladies Forum of Kerala Chamber of Commerce and Industry. Ms Parveen Hafeez also holds a position in "TiE Kerala" as Charter Member Ms Parveen Hafeez is married to Dr Hafeez Rahman Padiyath, Gynecologist and Laparoscopic Surgeon who is the founder of Sunrise Group of Hospitals. She is the Proud Mother of three daughters Dr Sonia Farhan, Dr Ayesha Taniya and Ms Mariam Hafeez. She was selected as one of the three business women from India in 2013 by Fortune 500 companies and US Government for a month long "Leaders Mentoring Programme in the US" where she was placed with the Vice President of Johnson & Johnson, New York. To her credit, Ms Parveen Hafeez was selected for best women entrepreneurs in 2013 by Kerala's Leading Business Magazine - Dhanam Publications comprised by eminent jurists in appreciation of her proactive contribution to women empowerment and women entrepreneurship across the State of Kerala.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
