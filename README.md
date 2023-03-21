@@ -1,6 +1,6 @@
 <h1>Python-Django/Hospital Management System</h1>
 ​
-<p>This is a Hospital Management System built using the Django web framework in Python. It allows hospital staff to manage patients, doctors, appointments, and medical records.</p>
+This is a Hospital Management System built using the Django web framework in Python. It allows hospital staff to manage patients, doctors, appointments, and medical records.
 ​
 <h2>Features</h2>
 
