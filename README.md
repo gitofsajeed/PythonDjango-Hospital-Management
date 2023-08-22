@@ -16,42 +16,48 @@ This is a Hospital Management System built using the Django web framework in Pyt
 
 <li>Responsive design for mobile and desktop</li>
 
-<h2>Installation</h2>
+## Installation
 
-<li>Clone the repository: git clone https://github.com/gitofsajeed/Hospital-Management.git</li>
-
-
-<li>Change into the project directory: cd hospital-management</li>
-
-
-<li>Install the required packages: pip install -r requirements.txt</li>
+1. Clone the repository:
+   ```bash
+    git clone https://github.com/gitofsajeed/Hospital-Management.git
 
 
-<li>Run database migrations: python manage.py migrate</li>
+2. Change into the project directory:
+   ```bash
+    cd hospital-management
+
+3. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+
+4.Run database migrations:
+    
+    python manage.py migrate
+
+5. Create a superuser account:
+     ```bash
+       python manage.py createsuperuser
+
+6. Start the development server:
+   ```bash
+   python manage.py runserver
+
+7. Open http://localhost:8000/ in your web browser
 
 
-<li>Create a superuser account: python manage.py createsuperuser</li>
 
-
-<li>Start the development server: python manage.py runserver</li>
-
-
-<li>Open http://localhost:8000/ in your web browser</li>
-
-
-
-<h2>Contributing</h2>
+## Contributing
 
 Contributions are welcome! Please open an issue or pull request if you find a bug, have a feature request, or would like to contribute code.
 
-<h2>License</h2>
+## License
 
 This project is licensed under the MIT License. See the LICENSE.md file for details.
 
-<h2>Credits</h2>
+## Credits
 
 <li>Django web framework: https://www.djangoproject.com/</li>
-
 
 <li>Bootstrap front-end framework: https://getbootstrap.com/</li>
 
